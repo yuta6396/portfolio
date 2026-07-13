@@ -3,64 +3,202 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yuta Higuchi | Portfolio</title>
+
+  <meta
+    name="description"
+    content="Yuta Higuchiの研究・技術ポートフォリオ。気象制御、モデル予測制御、ベイズ最適化に関する研究を紹介します。"
+  >
+
+  <title>Yuta Higuchi | Research Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <header>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <header class="header">
+    <div class="header-inner">
+      <a class="site-name" href="#home">Yuta Higuchi</a>
+
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section class="hero">
-      <p class="subtitle">Master’s Student in Information Science</p>
-      <h1>Yuta Higuchi</h1>
-      <p>
-        Weather Control × Model Predictive Control × Bayesian Optimization
-      </p>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Research Portfolio</p>
+
+        <h1>Yuta Higuchi</h1>
+
+        <p class="hero-title">
+          Master’s Student in Information Science
+        </p>
+
+        <p class="hero-description">
+          Weather Control × Model Predictive Control × Bayesian Optimization
+        </p>
+
+        <div class="hero-links">
+          <a class="button primary" href="#research">View Research</a>
+
+          <a
+            class="button secondary"
+            href="https://github.com/yuta6396"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+        </div>
+      </div>
     </section>
 
-    <section id="about">
+    <section id="about" class="section">
+      <p class="section-label">About</p>
       <h2>About Me</h2>
-      <p>
-        広島大学大学院先進理工系科学研究科の修士課程に所属しています。
-        複雑システムと制御、数値気象シミュレーション、
-        ブラックボックス最適化に関する研究に取り組んでいます。
-      </p>
+
+      <div class="content">
+        <p>
+          広島大学大学院先進理工系科学研究科の修士課程に所属しています。
+          複雑システム科学、制御工学、数値気象シミュレーション、
+          ブラックボックス最適化に関する研究に取り組んでいます。
+        </p>
+
+        <p>
+          現在は、豪雨被害の低減を目的として、数値気象予測モデルと
+          Model Predictive Control、Bayesian Optimizationを組み合わせた
+          逐次的な気象介入設計を研究しています。
+        </p>
+      </div>
     </section>
 
-    <section id="research">
-      <h2>Research</h2>
-      <h3>逐次的な気象介入設計</h3>
-      <p>
-        豪雨被害の低減を目的として、数値気象予測モデル、
-        Model Predictive Control、Bayesian Optimizationを組み合わせた
-        気象介入手法を研究しています。
-      </p>
+    <section id="research" class="section">
+      <p class="section-label">Research</p>
+      <h2>Sequential Weather Intervention Design</h2>
+
+      <div class="research-grid">
+        <article class="research-card">
+          <p class="card-number">01</p>
+          <h3>Background</h3>
+          <p>
+            豪雨のような極端気象による被害を軽減する新たな方法として、
+            大気へ直接介入する気象制御が注目されています。
+          </p>
+        </article>
+
+        <article class="research-card">
+          <p class="card-number">02</p>
+          <h3>Challenge</h3>
+          <p>
+            気象場は非線形で初期値に敏感であり、予測誤差も時間とともに発展します。
+            また、数値気象モデルによる評価には大きな計算コストがかかります。
+          </p>
+        </article>
+
+        <article class="research-card">
+          <p class="card-number">03</p>
+          <h3>Approach</h3>
+          <p>
+            MPCにより最新の大気状態に応じて介入を更新し、
+            各制御時刻の介入パラメータをベイズ最適化によって探索します。
+          </p>
+        </article>
+      </div>
+
+      <div class="research-summary">
+        <h3>Current Research Topics</h3>
+
+        <ul>
+          <li>MPCとブラックボックス最適化による逐次介入設計</li>
+          <li>初期値摂動下における制御効果の頑健性評価</li>
+          <li>低次元気象状態を用いたContextual Bayesian Optimization</li>
+          <li>サロゲートモデルの再利用と計算コスト削減</li>
+        </ul>
+      </div>
     </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <p>Python / Bash / Git / Linux / MPI / Bayesian Optimization</p>
+    <section id="publications" class="section">
+      <p class="section-label">Publications</p>
+      <h2>Presentations</h2>
+
+      <div class="timeline">
+        <article class="timeline-item">
+          <p class="timeline-year">2026</p>
+
+          <div>
+            <h3>JpGU 2026</h3>
+            <p>
+              Sequential Weather Intervention Design Using Model Predictive
+              Control and Black-Box Optimization
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <p class="timeline-year">2026</p>
+
+          <div>
+            <h3>日本気象学会秋季大会</h3>
+            <p>
+              MPCとブラックボックス最適化を用いた逐次的気象介入設計
+            </p>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section id="contact">
+    <section id="skills" class="section">
+      <p class="section-label">Skills</p>
+      <h2>Technical Skills</h2>
+
+      <div class="skills-grid">
+        <article class="skill-card">
+          <h3>Programming</h3>
+          <p>Python / Bash / Git</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Simulation</h3>
+          <p>SCALE-RM / MPI / Fugaku</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Data Analysis</h3>
+          <p>NumPy / pandas / Matplotlib / NetCDF</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Optimization</h3>
+          <p>Bayesian Optimization / Random Search / MPC</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <p class="section-label">Contact</p>
       <h2>Contact</h2>
+
       <p>
-        <a href="https://yuta6396.github.io/portfolio/">
-          GitHub
-        </a>
+        研究や技術的な活動については、GitHubからご確認いただけます。
       </p>
+
+      <a
+        class="button primary"
+        href="https://github.com/yuta6396"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View GitHub Profile
+      </a>
     </section>
   </main>
 
-  <footer>
+  <footer class="footer">
     <p>© 2026 Yuta Higuchi</p>
   </footer>
 </body>
